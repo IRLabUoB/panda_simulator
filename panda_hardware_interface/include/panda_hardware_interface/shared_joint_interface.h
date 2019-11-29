@@ -72,7 +72,7 @@ public:
     if (it == containers_.end())
     {
       containers_.insert(std::make_pair(handle->getName(), handle));
-      ROS_DEBUG_STREAM("Added Container '" << handle->getName() << "'");
+      ROS_INFO_STREAM("Added Container '" << handle->getName() << "'");
     }
     else
     {

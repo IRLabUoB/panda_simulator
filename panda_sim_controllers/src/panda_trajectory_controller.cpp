@@ -21,6 +21,7 @@ namespace panda_sim_controllers {
       typedef joint_trajectory_controller::JointTrajectoryController<trajectory_interface::QuinticSplineSegment<double>,
                                                                  panda_hardware_interface::SharedJointInterface>
           PandaJointTrajectoryController;
+
   
 }
 
