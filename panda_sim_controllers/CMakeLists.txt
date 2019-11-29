@@ -7,6 +7,7 @@ add_definitions(-std=c++14)
 
 find_package(catkin REQUIRED COMPONENTS
   effort_controllers
+  controller_interface
   roscpp
   roslint
   franka_core_msgs
@@ -20,7 +21,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES panda_sim_controllers
-  CATKIN_DEPENDS panda_hardware_interface roscpp actionlib actionlib_msgs
+  CATKIN_DEPENDS panda_hardware_interface roscpp actionlib actionlib_msgs controller_interface
   # DEPENDS Franka
 )
 roslint_cpp()
@@ -39,6 +40,7 @@ add_library(${PROJECT_NAME}
   src/panda_joint_velocity_controller.cpp
   src/panda_joint_effort_controller.cpp
   src/panda_gripper_controller.cpp
+  src/panda_trajectory_controller.cpp
 )
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 14)
